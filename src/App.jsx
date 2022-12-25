@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import React from 'react'
 import reactLogo from './assets/react.svg'
-import myImage from './assets/1.svg'
+
 import './App.css'
 import Intro from './components/Intro'
 import Quiz from './components/Quiz'
@@ -55,7 +55,6 @@ function App() {
 
   return (
     <div className='main'>
-      <img src={myImage} alt='myImage' />
       {showQuiz === false && <Intro startQuiz={startQuiz} />}
       {showQuiz && <Quiz questions={questions} startNew={startNew} answered={answered}/>
       }
