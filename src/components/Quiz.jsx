@@ -1,6 +1,7 @@
 import React from "react";
 import { nanoid } from 'nanoid'
 import Question from "./Question";
+import Confetti from 'react-confetti'
 
 export default function Quiz(props) {
   const [gameOver, setGameOver] = React.useState(false)
@@ -24,6 +25,7 @@ export default function Quiz(props) {
       {questionsElements}
       {gameOver ?
       <div className="results">
+        <Confetti />
         <h2>Your score: {totalScore}/5</h2>
         <div className="play-again-button">
           <a onClick={() => props.startNew()}> Play Again</a>
