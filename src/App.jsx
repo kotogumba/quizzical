@@ -11,10 +11,6 @@ function App() {
   const [questions, setQuestions] = useState([])
   const [newGame, setNewGame] = useState(false)
 
-
-
-  // https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple
-
   React.useEffect(() => {
     console.log('useEffect')
     const questionsArray = []
